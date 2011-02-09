@@ -1,0 +1,5 @@
+lastfm2spotify is a collection of hacks to turn charts and loved tracks of last.fm users in to Spotify playlists.
+Unfortunately there is no obvious way to manage playlists from scripts, so there is one manual step: pasting the found spotify id's into an playlist.
+If you're on a mac the playlist will be on your clipboard after running the scripts, if not, you'll have to edit the scripts slightly
+
+enjoy
