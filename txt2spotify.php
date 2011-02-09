@@ -17,9 +17,12 @@ function get_json_api($url)
 		else
 			return Array('status'=>'error', 'error'=>'http status ' . $info['http_code']);
 }
+
 $username = (isset($argv[1])) ? $argv[1] : 'quarkness';
-$txt_filename = "weeklytrackchart.{$username}.txt";
-$spotify_filename = "weeklytrackchart.{$username}.spotify";
+$kind = (isset($argv[2])) ? $argv[2] : 'weeklytrackchart';
+
+$txt_filename = "{$kind}.{$username}.txt";
+$spotify_filename = "{$kind}.{$username}.spotify";
 $h_txt = fopen($txt_filename, 'r');
 $h_spotify = fopen($spotify_filename, 'w');
 
