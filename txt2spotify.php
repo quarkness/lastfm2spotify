@@ -29,7 +29,7 @@ $h_spotify = fopen($spotify_filename, 'w');
 //$line = 'smurfen dierentuin';
 while (($line = fgets($h_txt)) !== false)
 {
-	$terms = urlencode(trim($line));
+	$terms = urlencode(trim(str_replace(' - ', ' ', $line)));
 	if(strlen($terms) > 0)
 	{
 		$url = $spotify_lookup_uri . $terms;
